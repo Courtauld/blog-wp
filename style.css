@@ -1,0 +1,545 @@
+/*
+Theme Name: Courtauld Blogs
+Theme URI: 
+Author: Jacob Wilson, working from Eva Bensasson and AD
+Author URI: http://jacobcharleswilson.com
+Description: A responsive mobile-first theme for The Courtauld's WordPress blogs, employing styling based on the designs by AD (formerly Alienation Development).
+Version: 1-2015-10-27
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,300,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100");
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End of Reset CSS */
+
+/* Begin of Rebuild CSS */
+
+/* Styles */
+
+html, body {
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    position: relative;
+    cursor: auto;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.5s ease
+}
+
+a:hover, a:focus {cursor:pointer;}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height:auto;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4, h5, h6 {
+  font-size: 1rem;
+}
+
+p {
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+small {
+  font-size: 60%;
+  line-height: inherit
+}
+
+em, i, cite {
+  font-style: italic;
+  line-height: inherit
+}
+
+strong, b {
+  font-weight: bold;
+  line-height: inherit
+}
+
+hr {
+  border: solid #DDD;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.2rem 0 1.2rem;
+  height: 0;
+}
+
+ul, ol, dl {
+    line-height: 1.6rem;
+    list-style-position: outside;
+    margin-left: 2rem;
+}
+
+.post li, dt {margin-bottom:1rem;}
+
+blockquote {margin: 0 0 1.25rem; quotes: "\201C""\201D""\2018""\2019";}
+
+blockquote p {display: inline;}
+
+blockquote cite {
+  display: block;
+  font-family: 'Merriweather', serif;
+  font-style: normal;
+  font-size: 0.875rem;
+}
+
+blockquote cite:before {
+  content: "\2014 \0020"
+}
+
+blockquote cite a {
+  font-family: 'Roboto', sans-serif
+}
+
+blockquote:before {
+  content: open-quote;
+  margin-right: 0.25em;
+}
+
+/* Image Styles */
+
+figure {
+  line-height: 100%
+}
+
+img {max-width:100%; height:auto;}
+
+code {font-family:monospace; background-color: rgba(32,32,32,0.6); color:#fefefe; padding:0.1rem 0.3rem;}
+
+/* Structural Styles
+
+    Whereas the above styles determine the typographic styles, the below styles determine the structural styles, that is, widths, heights, floats, etc.
+
+*/
+
+/* Header Styles */
+
+#site-header {z-index:3;}
+
+.header-logo {float: left;}
+
+.header-logo a {float: inherit;}
+
+.header-logo img {margin:1rem; max-height:2.2rem;}
+
+/* Navigation Styles */
+
+.header-button {
+    padding:1.6rem 1rem;
+    position:absolute;
+    text-align:center;
+    z-index: 4;
+    top:0.0rem;
+    right:0;
+}
+
+#menu-close {padding:1.6rem 2rem; z-index: 3;}
+
+#site-nav:target + .button-close {
+    display: block;
+    z-index: 5;
+}
+
+#site-nav {
+    position: absolute;
+    display: block;
+    width: 35%;
+    float:right;
+    height: 0px;
+    max-height: 0px;
+    padding-top: 0px;
+    opacity: 0;
+    transition: none ;
+      }
+
+#site-nav ul {
+    display: none;
+    margin: 0;
+}
+
+#site-nav ul li {
+    list-style: none;
+    border: 1px solid #424f58;
+    text-align: center;
+}
+
+#site-nav ul li a {
+    display: block;
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    line-height:2rem;
+    padding:1rem;
+    text-transform: uppercase;
+    transition: background 0.5s ease;
+    z-index: 3
+}
+
+ #site-nav:target {
+     position: relative;
+     top: -10rem; /* This line stops the view moving down when the menu is opened */
+     padding-top: 10em; /* This line stops the view moving down when the menu is opened */
+     margin-bottom: -8em; /* This line stops the view moving down when the menu is opened */
+     z-index: 2;
+     height: 100%;
+     opacity: 1;
+     transition: opacity .4s ease-out, max-height .4s ease-out;
+ }
+
+ #site-nav:target ul {
+    display: block;
+ }
+
+#site-nav ul li a:hover {
+    background: #2f4454;
+}
+
+/* The styles below control the site banner */
+
+#brand {background-repeat: no-repeat; background-size: cover;}
+
+.black-transparency {background-color:rgba(0,0,0,0.4);}
+
+#header-alignment {padding-top:6rem; padding-left:1rem; height: 16rem;}
+
+/* The styles below control the main content area of the website */
+
+#main-container {padding:2rem 1rem;}
+#sidebar {padding-top:3rem;}
+.primary-widget {margin-bottom:2rem;}
+.primary-widget-title, primary-widget h3 {margin-bottom:1rem;}
+
+.latest-tweets ul {margin:0;}
+.latest-tweets ul li {list-style-type:none; margin-bottom:1rem;}
+.tweet-text {display:inline;}
+.tweet-text:before {content: '\201C';}
+.tweet-text:after {content: '\201D';}
+.tweet-details {display:inline;}
+.tweet-details:before {content: ' — '}
+
+.post, .page {padding-bottom:2rem; margin-bottom:2rem; border-bottom:#ddd 1px solid;}
+.post {max-width:100%;}
+.post-header {margin-bottom:1rem;}
+.title {margin-bottom:1rem; text-transform: capitalize;}
+
+.post-categories-div, .post-tags {margin-bottom:1rem;}
+.post-categories-div ul {margin:0; padding:0;}
+.post-categories-div ul li {list-style-type:none; display:inline;}
+.post-categories-div ul li:after, .post-tags a:after {content: "|"; margin:0 1rem;}
+.post-categories-div ul li:last-child:after, .post-tags a:last-child:after {content:none;}
+.post-tags {overflow-wrap: break-word; word-wrap: break-word;}
+
+.the-content {margin-bottom:2rem;}
+.the-content li {margin-bottom:1rem;}
+
+.the-excerpt p {margin:0; padding:0;}
+
+/* Author Page styles */
+
+.author-profile {margin-bottom:2rem; padding-bottom:2rem; border-bottom:1px #ddd solid;}
+.author-profile h1 {margin-bottom:2rem;}
+.author-recent-posts h1, .author-recent-posts h2, .author-recent-posts h3 {margin-bottom:1rem;}
+.author-recent-posts>h1 {margin-bottom:2rem; padding-bottom:2rem; border-bottom:1px #ddd solid;}
+#author-photo, #author-description {float:left; max-width:47.5%;}
+#author-photo {margin-right:5%;}
+#author-photo img {max-width:50%; display:block; margin:0 auto;}
+
+/* Images within posts */
+
+.post, .post div, .post div img, .post p img {max-width:100%;}
+.wp-post-image, .alignnone, .alignleft, .alignright, .aligncenter {margin-bottom:1rem;}
+.wp-post-image {display:block; margin: 0 auto;}
+.alignnone {display: block; margin-left: auto; margin-right: auto;}
+.alignleft {float:left; width:45%; margin-right:5%;}
+.alignright {float:right; width:45%; margin-left:5%;}
+.aligncenter {display:block; margin-left:auto; margin-right:auto;}
+.wp-caption-text {font-family:'Merriweather'; font-size:small; padding:1rem; font-style: italic; margin:0;}
+.wp-caption-text cite, wp-caption-text em, wp-caption-text i {font-style:normal;}
+
+/* Page Navigation Styles */
+
+#page-nav {display:flex; flex-direction:row; width:100%; border-bottom: 1px solid #dddddd; margin-bottom:1rem; padding-bottom:2rem;}
+#older-page, #newer-page {width:6rem; height:4rem; line-height:4rem; text-align:center;}
+#newer-page {align-self: flex-start;}
+#older-page {margin-left: auto;}
+
+@media only screen and (min-width:62em) {
+    #page-nav {border:none; padding:0; margin:0;}
+}
+
+/* CSS Counters for post images */
+
+.post p a :nth-last-of-type(n+3), .post p a :nth-last-of-type(n+3) ~ .post p img {max-width:30%;}
+/* Footer Styles */
+
+.footer {background: #263744; padding:3rem 1rem 1rem 1rem;}
+
+#site-footer h3 {font-size: 1rem; text-transform: uppercase; padding:0; margin:0;}
+    
+#site-footer p, #site-footer {font-size: 0.75rem; text-transform: uppercase;}
+
+/* Footer Address Section */
+@media only screen and (min-width:62em) {
+    .footer-info {display: inline; float:left; width:30%;}
+}
+/* Footer nav section */
+
+        .footer-nav {display:none;}
+
+        .sub-menu {list-style-type:none; margin:0; padding:0;}
+            .sub-menu li {margin:0; padding:0;}
+                .sub-menu li a {
+                    display: inline;
+                }
+
+@media only screen and (min-width:62em) {
+  .footer-nav {
+    display:inline;
+    width: 60%;
+    float: right;}
+
+  .footer-nav>ul>li {
+    float: left;
+    margin-bottom: 2rem;
+    width: 25%
+  }
+}
+
+/* Uni Logo Row Style */
+
+.footer-copy-uni-logo {
+    margin-bottom:1rem;
+    text-align:center;
+}
+
+/* Footer copy row styles */
+
+.footer-copy {
+    padding-top:1rem;
+    border-top: 1px solid #424f58;
+    text-align: center;
+}
+
+.footer-copy-text p, .footer-copy-nav a {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin:0;
+    padding:0;
+}
+
+/* Footer Copy Nav Styles */
+
+.footer-copy-nav li {display: inline}
+
+.footer-copy-nav a:after {content: "|"; margin: 0 5px 0 9px;}
+
+.footer-copy-nav li:last-child a:after {display: none}
+
+/* The media query below controls styles for medium sized content */
+
+@media only screen and (min-width:62em) {
+
+    .header-logo img {
+        max-height: 3.9rem;
+    }
+    
+    .header-button {display:none;}
+    
+    #site-nav {
+        position:relative;
+        display: table;
+        table-layout: fixed;
+        opacity: 1;
+        width: 100%;
+        float:none;
+    }
+
+    #site-nav ul {
+        display: table-row;
+    }
+    
+    #site-nav ul li {display:table-cell;}
+    
+    #header-alignment {padding-left:3rem;}
+    
+    
+    #main {width:70%; position:relative; float:left; border-right:#ddd 1px solid; margin-right:3rem; padding:3rem 3rem 3rem 2rem;}
+    #sidebar {width:25%; position:relative; float:left;}
+    
+    .footer-copy-uni-logo {text-align:right;}
+    
+    .footer-copy-nav {
+        display:block;
+        padding-left: 0;
+        padding-right: 0;
+        width: 30%;
+        float: right;
+        text-align:right;
+    }
+        
+    .footer-copy-text {
+        padding-left: 0;
+        padding-right: 0;
+        float: left;
+        margin: 0;
+    
+        width:70%;
+        text-align:left;
+    }
+}
+/* End of the Media Query */
+
+/* The media queries below control styles for printing to PDF or paper */
+
+@media print {
+    @page {margin:0;}
+    html, body {background-color:white; color:black;}
+    #site-header {display:none;}
+    .button {display:none;}
+    #brand {display:none;}
+    #sidebar {display:none;}
+    #site-footer {display:none;}
+    .post-meta {display:none;}
+    
+    article {width:100%; margin:0; padding:0;}
+    h2, h3 {page-break-after: avoid;}
+    img {max-width:100% !important;}
+    ul, img {page-break-inside: avoid;}
+    
+    /* Print Colours */
+    /* Show external absolute links, hide internal relative links */
+    
+    article a {
+        text-decoration: underline;
+    }
+
+    article a[href^=http]:after {
+        content:" (" attr(href) ") ";
+    }
+    
+    /* BUT we will hide the links around images */
+    article a[href^="#"]:after {
+        content: "";
+    }
+
+    $a:after > img {
+        content: "";
+    }
+}
+
+/* The query below forces the printer to use the screen colour values, NOT the printer's colour values */
+
+@media print and (color) {
+   * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+   }
+}
+
+/* The styles below control the typographic and colours */
+
+/* Colours */
+#site-header, #site-footer {background: #263744;}
+body {background: #ffffff; color: #222222;}
+a {color: #008CBA;}
+.button {background-color: #6ebec4; color: #fff;}
+.button a {color: #fff;}
+#site-nav {background: #263744;}
+#site-nav ul li {background-color:#263744;}
+#site-nav ul li a {color: #fff;}
+.post-header h1 a {color:#222;}
+wp-caption-text {font-color:grey;}
+
+#older-page a, #newer-page a {color:#fff;}
+
+.footer-info-address h3 {color: #fff;}
+.footer-info-address p {color: #aaafb2;}
+
+.footer-nav ul li a h3 {color:#fff;}
+.sub-menu li a {color:#aaafb2;}
+.sub-menu li a:hover {color: #fff;}
+
+.footer-copy-text p, .footer-copy-nav a {color: #A8B5BD;}
+
+a:hover, a:focus {color:#0078a0;}
+
+/* Typeography */
+p {hyphens: auto;}
+p {overflow-wrap: break-word; word-wrap: break-word;}
+
+/* Cateogirses and tags typeography */
+.post-meta, .post-meta h2, .post-meta p {font-family: 'Roboto', sans-serif; font-size: 0.75rem; color:#aaafb2; display:inline; text-transform:uppercase;}
+.post-meta h2:after {content: " - "}
+.post-categories-div ul, .post-tags {display:inline;}
+.post-author, .post-date {margin-bottom:1rem;}
