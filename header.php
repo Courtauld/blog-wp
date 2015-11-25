@@ -49,6 +49,7 @@
 // Removing this fxn call will disable all kinds of plugins and Wordpress default insertions. 
 // Move it if you like, but I would keep it around.
 ?>
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
 </head>
 <body>
     <header id="site-header" class="header" role="banner">
