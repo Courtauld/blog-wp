@@ -4,7 +4,7 @@ Theme URI:
 Author: Jacob Wilson, working from Eva Bensasson and AD
 Author URI: http://jacobcharleswilson.com
 Description: A responsive mobile-first theme for The Courtauld's WordPress blogs, employing styling based on the designs by AD (formerly Alienation Development).
-Version: 1-2015-10-27
+Version: 1-2015-11-25
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -33,7 +33,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-	line-height: 1;
+	line-height: auto;
 }
 
 blockquote, q {
@@ -57,37 +57,34 @@ table {
 
 /* Styles */
 
-html, body {
-    font-size: 16px;
-}
-
+/* Consider removing border-box, it might be a nightmare for calculations that don't take it into account */
 *, *:before, *:after {
     -moz-box-sizing: border-box;
     box-sizing: border-box
 }
 
+/* Set baseline font-size for all styles, then use 'rem' measurements for responsive sizing */
+html {
+    font-size: 16px;
+}
+
 body {
-    padding: 0;
-    margin: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
     font-style: normal;
-    position: relative;
-    cursor: auto;
 }
 
 a {
     text-decoration: none;
-    transition: color 0.5s ease
+    transition: color 0.5s ease;
 }
 
-a:hover, a:focus {cursor:pointer;}
+/* Differentiate titles with font-size rather than weight */
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
     font-weight: normal;
     font-style: normal;
-    line-height:auto;
 }
 
 h1 {
@@ -107,25 +104,19 @@ h4, h5, h6 {
 }
 
 p {
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.6rem;
   margin-bottom: 1.5rem;
 }
 
 small {
   font-size: 60%;
-  line-height: inherit
 }
 
 em, i, cite {
   font-style: italic;
-  line-height: inherit
 }
 
 strong, b {
   font-weight: bold;
-  line-height: inherit
 }
 
 hr {
@@ -137,7 +128,6 @@ hr {
 }
 
 ul, ol, dl {
-    line-height: 1.6rem;
     list-style-position: outside;
     margin-left: 2rem;
 }
@@ -189,9 +179,7 @@ code {font-family:monospace; background-color: rgba(32,32,32,0.6); color:#fefefe
 #site-header {z-index:3;}
 
 .header-logo {float: left;}
-
 .header-logo a {float: inherit;}
-
 .header-logo img {margin:1rem; max-height:2.2rem;}
 
 /* Navigation Styles */
@@ -268,9 +256,7 @@ code {font-family:monospace; background-color: rgba(32,32,32,0.6); color:#fefefe
 /* The styles below control the site banner */
 
 #brand {background-repeat: no-repeat; background-size: cover;}
-
 .black-transparency {background-color:rgba(0,0,0,0.4);}
-
 #header-alignment {padding-top:6rem; padding-left:1rem; height: 16rem;}
 
 /* The styles below control the main content area of the website */
@@ -327,6 +313,9 @@ code {font-family:monospace; background-color: rgba(32,32,32,0.6); color:#fefefe
 .wp-caption-text {font-family:'Merriweather'; font-size:small; padding:1rem; font-style: italic; margin:0;}
 .wp-caption-text cite, wp-caption-text em, wp-caption-text i {font-style:normal;}
 
+/* Featured Images (post thumbnails) */
+.attachment-post-thumbnail {margin-bottom:1rem;}
+
 /* Page Navigation Styles */
 
 #page-nav {display:flex; flex-direction:row; width:100%; border-bottom: 1px solid #dddddd; margin-bottom:1rem; padding-bottom:2rem;}
@@ -338,9 +327,6 @@ code {font-family:monospace; background-color: rgba(32,32,32,0.6); color:#fefefe
     #page-nav {border:none; padding:0; margin:0;}
 }
 
-/* CSS Counters for post images */
-
-.post p a :nth-last-of-type(n+3), .post p a :nth-last-of-type(n+3) ~ .post p img {max-width:30%;}
 /* Footer Styles */
 
 .footer {background: #263744; padding:3rem 1rem 1rem 1rem;}
