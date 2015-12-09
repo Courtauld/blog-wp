@@ -4,7 +4,7 @@ Theme URI:
 Author: Jacob Wilson, working from Eva Bensasson and AD
 Author URI: http://jacobcharleswilson.com
 Description: A responsive mobile-first theme for The Courtauld's WordPress blogs, employing styling based on the designs by AD (formerly Alienation Development).
-Version: 1-2015-11-25
+Version: 1-2015-12-9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -108,7 +108,7 @@ p {
 }
 
 small {
-  font-size: 60%;
+  font-size: 0.6rem;
 }
 
 em, i, cite {
@@ -155,7 +155,7 @@ blockquote cite a {
 
 blockquote:before {
   content: open-quote;
-  margin-right: 0.25em;
+  margin-right: 0.25rem;
 }
 
 /* Image Styles */
@@ -189,7 +189,7 @@ code {font-family:monospace; background-color: rgba(32,32,32,0.6); color:#fefefe
     position:absolute;
     text-align:center;
     z-index: 4;
-    top:0.0rem;
+    top:2.7rem;
     right:0;
 }
 
