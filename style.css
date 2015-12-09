@@ -27,8 +27,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
@@ -40,8 +39,7 @@ blockquote, q {
 	quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before, blockquote:after, q:before, q:after {
 	content: '';
 	content: none;
 }
@@ -70,8 +68,8 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-weight: normal;
     font-style: normal;
+	font-weight: normal;
 }
 
 a {
@@ -128,15 +126,27 @@ hr {
 }
 
 ul, ol, dl {
-    list-style-position: outside;
-    margin-left: 2rem;
+	list-style-position: outside;
+	margin-left: 2rem;
 }
 
-.post li, dt {margin-bottom:1rem;}
+.post li, dt {
+	margin-bottom:1rem;
+}
 
-blockquote {margin: 0 0 1.25rem; quotes: "\201C""\201D""\2018""\2019";}
+blockquote:before {
+  content: open-quote;
+  margin-right: 0.25rem;
+}
 
-blockquote p {display: inline;}
+blockquote {
+	margin: 0 0 1.25rem;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote p {
+	display: inline;
+}
 
 blockquote cite {
   display: block;
@@ -153,11 +163,6 @@ blockquote cite a {
   font-family: 'Roboto', sans-serif
 }
 
-blockquote:before {
-  content: open-quote;
-  margin-right: 0.25rem;
-}
-
 /* Image Styles */
 
 figure {
@@ -166,18 +171,15 @@ figure {
 
 img {max-width:100%; height:auto;}
 
-code {font-family:monospace; background-color: rgba(32,32,32,0.6); color:#fefefe; padding:0.1rem 0.3rem;}
+/* code {font-family:monospace; background-color: rgba(32,32,32,0.6); color:#fefefe; padding:0.1rem 0.3rem;} */
 
 /* Structural Styles
-
-    Whereas the above styles determine the typographic styles, the below styles determine the structural styles, that is, widths, heights, floats, etc.
-
+	Whereas the above styles determine the typographic styles, the below styles determine the structural styles, that is, widths, heights, floats, etc.
 */
 
 /* Header Styles */
 
 #site-header {z-index:3;}
-
 .header-logo {float: left;}
 .header-logo a {float: inherit;}
 .header-logo img {margin:1rem; max-height:2.2rem;}
@@ -333,13 +335,10 @@ code {font-family:monospace; background-color: rgba(32,32,32,0.6); color:#fefefe
 
 /* Footer nav section */
 
-        .footer-nav {display:none;}
-
-        .sub-menu {list-style-type:none; margin:0; padding:0;}
-            .sub-menu li {margin:0; padding:0;}
-                .sub-menu li a {
-                    display: inline;
-                }
+.footer-nav {display:none;}
+.sub-menu {list-style-type:none; margin:0; padding:0;}
+.sub-menu li {margin:0; padding:0;}
+.sub-menu li a {display: inline;}
 
 /* Uni Logo Row Style */
 
@@ -366,9 +365,7 @@ code {font-family:monospace; background-color: rgba(32,32,32,0.6); color:#fefefe
 /* Footer Copy Nav Styles */
 
 .footer-copy-nav li {display: inline}
-
 .footer-copy-nav a:after {content: "|"; margin: 0 5px 0 9px;}
-
 .footer-copy-nav li:last-child a:after {display: none}
 
 /* The media query below controls styles for medium sized content */
@@ -407,9 +404,10 @@ code {font-family:monospace; background-color: rgba(32,32,32,0.6); color:#fefefe
     .footer-info {display: inline; float:left; width:30%;}
     
     .footer-nav {
-        display:inline;
-        width: 60%;
-        float: right;}
+		display:inline;
+		float: right;
+		width: 60%;
+	}
 
     .footer-nav>ul>li {
         float: left;
@@ -417,28 +415,28 @@ code {font-family:monospace; background-color: rgba(32,32,32,0.6); color:#fefefe
         width: 25%
     }
     
-    .footer-copy-uni-logo {text-align:right;}
+    .footer-copy-uni-logo {
+		text-align:right;
+	}
     
     .footer-copy-nav {
         display:block;
+		float: right;
         padding-left: 0;
         padding-right: 0;
-        width: 30%;
-        float: right;
         text-align:right;
+		width: 30%;
     }
         
     .footer-copy-text {
-        padding-left: 0;
-        padding-right: 0;
         float: left;
         margin: 0;
-    
-        width:70%;
+		padding-left: 0;
+        padding-right: 0;
         text-align:left;
+		width:70%;
     }
 }
-/* End of the Media Query */
 
 /* The media queries below control styles for printing to PDF or paper */
 
@@ -499,7 +497,7 @@ a {color: #008CBA;}
 #site-nav ul li {background-color:#263744;}
 #site-nav ul li a {color: #fff;}
 .post-header h1 a {color:#222;}
-wp-caption-text {font-color:grey;}
+wp-caption-text {color:grey;}
 
 #older-page a, #newer-page a {color:#fff;}
 
@@ -518,7 +516,7 @@ a:hover, a:focus {color:#0078a0;}
 p {hyphens: auto;}
 p {overflow-wrap: break-word; word-wrap: break-word;}
 
-/* Cateogirses and tags typeography */
+/* Categories and tags typeography */
 .post-meta, .post-meta h2, .post-meta p {font-family: 'Roboto', sans-serif; font-size: 0.75rem; color:#aaafb2; display:inline; text-transform:uppercase;}
 .post-meta h2:after {content: " - "}
 .post-categories-div ul, .post-tags {display:inline;}
