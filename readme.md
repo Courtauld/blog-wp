@@ -7,11 +7,14 @@ This theme is based heavily on the bespoke theme developed by Eva Bensasson and 
 
 ##Change Log
 
+###1-2015-12-9
+Tidied up CSS file for better readability.
+
 ###1-2015-10-22
-Added author profile pages
+Added author profile pages.
 
 ###1-2015-10-21
-Fixed typographic errors
+Fixed typographic errors.
 
 ###1-2015-10-20
-Initial version
+Initial version.
