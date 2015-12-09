@@ -10,8 +10,8 @@
             <p>The page you are looking for might have been removed, had its name changed, or be temporarily unavailable.</p>
             <p>Please try the following:</p>
             <ul>
-                <li>Make sure that the Web site address displayed in the address bar of your browser is spelled and formatted correctly.</li>
-            <li>Click the Back button to try another link.</li>
+				<li>Make sure that the Web site address displayed in the address bar of your browser is spelled and formatted correctly.</li>
+				<li>Click the Back button to try another link.</li>
             </ul>
             <p>Alternatively, try our site search</p>
         </div>
