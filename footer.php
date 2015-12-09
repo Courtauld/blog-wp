@@ -55,9 +55,9 @@
         </div>
         <div class="footer-copy-nav">
             <ul>
-                <li id="menu-item-46317" class="menu-item  menu-item-46317"><a href="http://courtauld.ac.uk/about/website/cookies">Cookies</a></li>
-                <li id="menu-item-46318" class="menu-item  menu-item-46318"><a href="http://courtauld.ac.uk/about/website/privacy-policy">Privacy Policy</a></li>
-                <li id="menu-item-46319" class="menu-item  menu-item-46319"><a href="http://courtauld.ac.uk/about/website/site-map">Site Map</a></li>
+                <li class="menu-item"><a href="http://courtauld.ac.uk/about/website/cookies">Cookies</a></li>
+                <li class="menu-item"><a href="http://courtauld.ac.uk/about/website/privacy-policy">Privacy Policy</a></li>
+                <li class="menu-item"><a href="http://courtauld.ac.uk/about/website/site-map">Site Map</a></li>
             </ul>
         </div>
         <div style="clear:both;"></div>
