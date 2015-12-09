@@ -480,86 +480,6 @@ img {
     }
 }
 
-/* The media queries below control styles for printing to PDF or paper */
-
-@media print {
-    @page {
-		margin:0;
-	}
-    html, body {
-		background-color:white;
-		color:black;
-	}
-
-	#site-header {
-		display:none;
-	}
-
-	.button {
-		display:none;
-	}
-
-	#brand {
-		display:none;
-	}
-
-	#sidebar {
-		display:none;
-	}
-    
-	#site-footer {
-		display:none;
-	}
-
-	.post-meta {
-		display:none;
-	}
-
-    article {
-		width:100%; margin:0; padding:0;
-	}
-
-	h2, h3 {
-		page-break-after: avoid;
-	}
-    
-	img {
-		max-width:100% !important;
-	}
-
-	ul, img {
-		page-break-inside: avoid;
-	}
-
-	/* Show external absolute links, hide internal relative links */
-    
-    article a {
-        text-decoration: underline;
-    }
-
-    article a[href^=http]:after {
-        content:" (" attr(href) ") ";
-    }
-    
-    /* BUT we will hide the links around images */
-    article a[href^="#"]:after {
-        content: "";
-    }
-
-    $a:after > img {
-        content: "";
-    }
-}
-
-/* The query below forces the printer to use the screen colour values, NOT the printer's colour values */
-
-@media print and (color) {
-   * {
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-   }
-}
-
 /* Colours */
 
 #site-header, #site-footer {
@@ -663,4 +583,84 @@ p {
 
 .post-author, .post-date {
 	margin-bottom:1rem;
+}
+
+/* The media queries below control styles for printing to PDF or paper */
+
+@media print {
+    @page {
+		margin:0;
+	}
+    html, body {
+		background-color:white;
+		color:black;
+	}
+
+	#site-header {
+		display:none;
+	}
+
+	.button {
+		display:none;
+	}
+
+	#brand {
+		display:none;
+	}
+
+	#sidebar {
+		display:none;
+	}
+
+	#site-footer {
+		display:none;
+	}
+
+	.post-meta {
+		display:none;
+	}
+
+    article {
+		width:100%; margin:0; padding:0;
+	}
+
+	h2, h3 {
+		page-break-after: avoid;
+	}
+
+	img {
+		max-width:100% !important;
+	}
+
+	ul, img {
+		page-break-inside: avoid;
+	}
+
+	/* Show external absolute links, hide internal relative links */
+
+    article a {
+        text-decoration: underline;
+    }
+
+    article a[href^=http]:after {
+        content:" (" attr(href) ") ";
+    }
+
+    /* BUT we will hide the links around images */
+    article a[href^="#"]:after {
+        content: "";
+    }
+
+    $a:after > img {
+        content: "";
+    }
+}
+
+/* The query below forces the printer to use the screen colour values, NOT the printer's colour values */
+
+@media print and (color) {
+   * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+   }
 }
