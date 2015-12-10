@@ -19,8 +19,8 @@
                 <?php endif; ?><!-- This displays the caption below the featured image -->
             </div> 
             <section class="the-content">
-                <?php the_content( 'Continue...' );	?>
-                <div style="clear:both;"></div>
+				<?php the_content( 'Continue...' );	?>
+				<div style="clear:both;"></div>
             </section>
             <section class="post-meta">
                 <?php if ( has_category() ) : ?>
@@ -41,6 +41,10 @@
     <?php else : ?>
         <article class="post error">
             <h1 class="404">Nothing has been posted like that yet</h1>
+			<p>Try searching the site for more articles</p>
+			<div class="search-form">
+            	<?php get_search_form(); ?>
+        	</div>
         </article>
     <?php endif; ?>
 </main>
