@@ -637,7 +637,7 @@ p {
 		page-break-inside: avoid;
 	}
 
-	/* Show external absolute links, hide internal relative links */
+	/* Show external absolute links, hide internal relative links
 
     article a {
         text-decoration: underline;
@@ -647,14 +647,17 @@ p {
         content:" (" attr(href) ") ";
     }
 
-    /* BUT we will hide the links around images */
-    article a[href^="#"]:after {
+	BUT we will hide the links around images
+
+	article a[href^="#"]:after {
         content: "";
     }
 
-    $a:after > img {
+    img > $a:after {
         content: "";
     }
+
+	*/
 }
 
 /* The query below forces the printer to use the screen colour values, NOT the printer's colour values */
