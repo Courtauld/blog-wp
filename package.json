@@ -1,0 +1,37 @@
+{
+  "name": "courtauld-blogs-wp",
+  "version": "1.0.0",
+  "description": "A WordPress theme for The Courtauld blogs",
+  "main": "gulpfile.js",
+  "author": "Jacob Charles Wilson <jacob.wilson@courtauld.ac.uk>",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-minify-css": "^1.2.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.1",
+    "gulp-watch": "^4.3.5"
+  }
+	build 		= '/build/', // Files that you want to package into a zip go here
+	buildInclude 	= [
+				// include common file types
+				'**/*.php',
+				'**/*.html',
+				'**/*.css',
+				'**/*.js',
+				'**/*.svg',
+				'**/*.ttf',
+				'**/*.otf',
+				'**/*.eot',
+				'**/*.woff',
+				'**/*.woff2',
+
+				// include specific files and folders
+				'screenshot.png',
+
+				// exclude files and folders
+				'!node_modules/**/*',
+			];
+}
