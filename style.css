@@ -331,8 +331,8 @@ img {
 .wp-post-image, .alignnone, .alignleft, .alignright, .aligncenter {margin-bottom:1rem;}
 .wp-post-image {display:block; margin: 0 auto;}
 .alignnone {display: block; margin-left: auto; margin-right: auto;}
-.alignleft {float:left; width:45%; margin-right:5%;}
-.alignright {float:right; width:45%; margin-left:5%;}
+.alignleft {float:left; max-width:45%; margin-right:5%;}
+.alignright {float:right; max-width:45%; margin-left:5%;}
 .aligncenter {display:block; margin-left:auto; margin-right:auto;}
 .wp-caption-text {font-family:'Merriweather'; font-size:small; padding:1rem; font-style: italic; margin:0;}
 .wp-caption-text cite, wp-caption-text em, wp-caption-text i {font-style:normal;}
