@@ -63,13 +63,6 @@
         <div style="clear:both;"></div>
     </div>
 </footer>
-
-<script type="text/javascript" src="http://courtauld.ac.uk/wp-content/cache/minify/000000/M9BPzi8tKkkszUnRzyrWTywo0MvNzAMA.js"></script>
-<!--<script type="text/javascript" src="https://addthisevent.com/libs/1.5.8/ate.min.js"></script>-->
-<script type="text/javascript" src="http://courtauld.ac.uk/wp-content/cache/minify/000000/M9RPzs8rSUwu0U3LL8rVNdfPzEvOKU1JLdbPAqLC0tSiSj2QjF5uZh4A.js"></script>
-<script type="text/javascript" src="http://courtauld.ac.uk/wp-content/cache/minify/000000/HctRDoAgCADQC8XQr87TCDbS0Amuun2t77eXkZrFRgHSxgkrqlGdOzsejk5De_iSMC62eEQlmO2noh2qWvkeTQfR-wU.js"></script>
-<script type="text/javascript" src="http://courtauld.ac.uk/wp-content/cache/minify/000000/M9AvKU_NK6lMy0wrSU3N088q1k8rzUsuyczPKwYA.js"></script>
-
         <?php wp_footer(); ?>
     </body>
 </html>
