@@ -30,9 +30,9 @@
                     </div>
                 <?php endif; ?>
                 <?php if ( has_tag() ) : ?>
-                    <div class="post-tags">
+                    <div class="post-tags-div">
                         <h2>Tags</h2>
-                        <?php echo get_the_tag_list(); ?>
+                        <?php if(get_the_tag_list()) {echo get_the_tag_list('<ul class="post-tags"><li>','</li><li>','</li></ul>');}?>
                     </div>
                 <?php endif; ?>
             </section>

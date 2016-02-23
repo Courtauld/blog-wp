@@ -61,7 +61,6 @@ table {
 }
 
 /* Set baseline font-size for all styles, then use 'rem' measurements for responsive sizing */
-
 html {
     font-size: 16px;
 }
@@ -78,11 +77,8 @@ a {
 }
 
 /* Differentiate titles with font-size rather than weight */
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
-    font-weight: normal;
-    font-style: normal;
 }
 
 h1 {
@@ -134,14 +130,14 @@ ul, ol, dl {
 	margin-bottom:1rem;
 }
 
-blockquote:before {
-  content: open-quote;
-  margin-right: 0.25rem;
-}
-
 blockquote {
 	margin: 0 0 1.25rem;
 	quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  content: open-quote;
+  margin-right: 0.25rem;
 }
 
 blockquote p {
@@ -151,16 +147,10 @@ blockquote p {
 blockquote cite {
 	display: block;
 	font-family: 'Merriweather', serif;
-	font-style: normal;
-	font-size: 0.875rem;
 }
 
 blockquote cite:before {
 	content: "\2014 \0020"
-}
-
-blockquote cite a {
-	font-family: 'Roboto', sans-serif
 }
 
 /* Image Styles */
@@ -173,8 +163,6 @@ img {
 	max-width:100%;
 	height:auto;
 }
-
-/* code {font-family:monospace; background-color: rgba(32,32,32,0.6); color:#fefefe; padding:0.1rem 0.3rem;} */
 
 /* Structural Styles
 	Whereas the above styles determine the typographic styles, the below styles determine the structural styles, that is, widths, heights, floats, etc.
@@ -211,11 +199,6 @@ img {
 
 #menu-close {padding:1.5rem 2rem; z-index: 3;}
 
-#site-nav:target + .button-close {
-    display: block;
-    z-index: 5;
-}
-
 #site-nav {
     position: absolute;
     display: block;
@@ -227,6 +210,13 @@ img {
     opacity: 0;
     transition: none ;
       }
+
+#site-nav:target + .button-close {
+    display: block;
+    z-index: 5;
+}
+
+
 
 #site-nav ul {
     display: none;
@@ -274,6 +264,7 @@ img {
 #brand {
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 }
 
 .black-transparency {
@@ -300,21 +291,47 @@ img {
 .tweet-details {display:inline;}
 .tweet-details:before {content: ' — '}
 
+/* The styles below control the post or page */
+
 .post, .page {padding-bottom:2rem; margin-bottom:2rem; border-bottom:#ddd 1px solid;}
-.post {max-width:100%;}
+
 .post-header {margin-bottom:1rem;}
 .title {margin-bottom:1rem; text-transform: capitalize;}
 
-.post-categories-div, .post-tags {margin-bottom:1rem;}
-.post-categories-div ul {margin:0; padding:0;}
-.post-categories-div ul li {list-style-type:none; display:inline;}
-.post-categories-div ul li:after, .post-tags a:after {content: "|"; margin:0 1rem;}
-.post-categories-div ul li:last-child:after, .post-tags a:last-child:after {content:none;}
-.post-tags {overflow-wrap: break-word; word-wrap: break-word;}
+.post-meta div {margin-bottom:1rem;}
+
+.post-categories, .post-tags {margin:0; padding:0;}
+
+.post-categories li, .post-tags li {list-style-type:none; display:inline;}
+
+.post-categories li:before, .post-tags li:before {content: "|"; margin:0 0.5rem;}
+
+.post-categories li:first-child:before, .post-tags li:first-child:before {content:none;}
+
+/* Categories and tags typeography */
+
+.post-meta, .post-meta h2, .post-meta p {
+	color:#aaafb2;
+	display:inline;
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.75rem;
+	text-transform:uppercase;
+}
+
+.post-meta h2:after {
+	content: " - ";
+}
+
+.post-categories, .post-tags {
+	display:inline;
+}
+
+.post-author, .post-date {
+	margin-bottom:1rem;
+}
 
 .the-content {margin-bottom:2rem;}
 .the-content li {margin-bottom:1rem;}
-
 .the-excerpt p {margin:0; padding:0;}
 
 /* Author Page styles */
@@ -342,7 +359,7 @@ img {
 
 /* Page Navigation Styles */
 #page-nav {display:flex; flex-direction:row; width:100%; border-bottom: 1px solid #dddddd; margin-bottom:1rem; padding-bottom:2rem;}
-#older-page, #newer-page {width:6rem; height:4rem; line-height:4rem; text-align:center;}
+#page-nav .button {width:6rem; height:4rem; line-height:4rem; text-align:center;}
 #newer-page {align-self: flex-start;}
 #older-page {margin-left: auto;}
 
@@ -429,6 +446,7 @@ img {
 		position:relative;
 		width:70%;
 	}
+
     #sidebar {
 		float:left;
 		position:relative;
@@ -495,24 +513,17 @@ a {
 	color: #008CBA;
 }
 
+a:hover, a:focus {
+	color:#0078a0;
+}
+
 .button {
-	background-color: #6ebec4; color: #fff;
+	background-color: #6ebec4; color: #ffffff;
 }
 
-.button a {
-	color: #fff;
-}
-
-#site-nav {
+#site-nav, #site-nav ul li a {
 	background: #263744;
-}
-
-#site-nav ul li {
-	background-color:#263744;
-}
-
-#site-nav ul li a {
-	color: #fff;
+	color:#ffffff;
 }
 
 .post-header h1 a {
@@ -520,7 +531,7 @@ a {
 }
 
 wp-caption-text {
-	color:grey;
+	color:#aaafb2;
 }
 
 #older-page a, #newer-page a {
@@ -543,46 +554,15 @@ wp-caption-text {
 	color:#aaafb2;
 }
 
-.sub-menu li a:hover {
-	color: #fff;
-}
-
 .footer-copy-text p, .footer-copy-nav a {
-	color: #A8B5BD;
-}
-
-a:hover, a:focus {
-	color:#0078a0;
+	color: #aaafb2;
 }
 
 /* Typeography */
 
-p {
-	hyphens: auto;
+p, li {
 	overflow-wrap: break-word;
 	word-wrap: break-word;
-}
-
-/* Categories and tags typeography */
-
-.post-meta, .post-meta h2, .post-meta p {
-	color:#aaafb2;
-	display:inline;
-	font-family: 'Roboto', sans-serif;
-	font-size: 0.75rem;
-	text-transform:uppercase;
-}
-
-.post-meta h2:after {
-	content: " - ";
-}
-
-.post-categories-div ul, .post-tags {
-	display:inline;
-}
-
-.post-author, .post-date {
-	margin-bottom:1rem;
 }
 
 /* The media queries below control styles for printing to PDF or paper */
@@ -593,31 +573,11 @@ p {
 	}
 
     html, body {
-		background-color:white;
+		background:white;
 		color:black;
 	}
 
-	#site-header {
-		display:none;
-	}
-
-	.button {
-		display:none;
-	}
-
-	#brand {
-		display:none;
-	}
-
-	#sidebar {
-		display:none;
-	}
-
-	#site-footer {
-		display:none;
-	}
-
-	.post-meta {
+	#site-header, .button, #brand, #sidebar, #site-footer, .post-meta {
 		display:none;
 	}
 
@@ -656,15 +616,13 @@ p {
     img > $a:after {
         content: "";
     }
-
 	*/
 }
 
 /* The query below forces the printer to use the screen colour values, NOT the printer's colour values */
-
 @media print and (color) {
-   * {
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-   }
+	* {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
 }
