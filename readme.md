@@ -1,20 +1,13 @@
-Courtauld Blogs
-===============
+# blog-wp
 
 A WordPress theme developed by Jacob Charles Wilson (@jclwilson) for use on the blogs of The Courtauld Institute of Art and The Courtauld Gallery.
 
-This theme is based heavily on the bespoke theme developed by Eva Bensasson and AD (formerly Alienation Dev) for courtauld.ac.uk
+This theme approximates the bespoke theme developed by Eva Bensasson and AD (formerly Alienation Dev) for courtauld.ac.uk.
 
-##Change Log
+## contributing
 
-###1-2015-12-9
-Tidied up CSS file for better readability.
+This project uses a [feature-branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow).
 
-###1-2015-10-22
-Added author profile pages.
+To add or edit a feature, create a new branch and work on that branch, when finished, submit a pull request, and the feature will be merged into the master branch.
 
-###1-2015-10-21
-Fixed typographic errors.
-
-###1-2015-10-20
-Initial version.
+This ensures that the master branch is always a fully working theme.
