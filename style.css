@@ -52,9 +52,8 @@ table {
 
 /* End of Reset CSS */
 
-/* Styles */
+/* Rebuild styles */
 
-/* Consider removing border-box, it might be a nightmare for calculations that don't take it into account */
 *, *:before, *:after {
     -moz-box-sizing: border-box;
     box-sizing: border-box
@@ -62,7 +61,7 @@ table {
 
 /* Set baseline font-size for all styles, then use 'rem' measurements for responsive sizing */
 html {
-    font-size: 16px;
+    font-size: 16pt;
 }
 
 body {
@@ -73,7 +72,7 @@ body {
 
 a {
     text-decoration: none;
-    transition: color 0.5s ease;
+	transition: color 0.5s ease;
 }
 
 /* Differentiate titles with font-size rather than weight */
@@ -216,11 +215,8 @@ img {
     z-index: 5;
 }
 
-
-
 #site-nav ul {
     display: none;
-    margin: 0;
 }
 
 #site-nav ul li {
@@ -277,6 +273,8 @@ img {
 	padding-top:6rem;
 }
 
+.site-title {margin-bottom:1rem;}
+
 /* The styles below control the main content area of the website */
 #main-container {padding:2rem 1rem;}
 #sidebar {padding-top:3rem;}
@@ -295,7 +293,7 @@ img {
 
 .post, .page {padding-bottom:2rem; margin-bottom:2rem; border-bottom:#ddd 1px solid;}
 
-.post-header {margin-bottom:1rem;}
+.post-header {margin-bottom:2rem;}
 .title {margin-bottom:1rem; text-transform: capitalize;}
 
 .post-meta div {margin-bottom:1rem;}
@@ -371,7 +369,7 @@ img {
 /* Footer nav section */
 .footer-nav {display:none;}
 .sub-menu {list-style-type:none; margin:0; padding:0;}
-.sub-menu li {margin:0; padding:0;}
+.sub-menu li {margin:0 0 1rem 0; padding:0;}
 .sub-menu li a {display: inline;}
 
 /* Uni Logo Row Style */
@@ -468,11 +466,9 @@ img {
 		float: right;
 		width: 60%;
 	}
-
+	
     .footer-nav>ul>li {
-        float: left;
-        margin-bottom: 2rem;
-        width: 25%
+        width: calc(100% * (1/4));
     }
     
     .footer-copy-uni-logo {
